@@ -2,6 +2,9 @@ import string
 import random
 from prefixtree import PrefixTree
 
+#----------------------------------------
+# Dictionary initalization
+#----------------------------------------
 print('Loading dictionary...')
 
 with open('words.txt') as wordFile:
@@ -10,6 +13,9 @@ with open('words.txt') as wordFile:
 prefix_tree = PrefixTree(wordList)
 
 
+#----------------------------------------
+# Character bank initialization
+#----------------------------------------
 bank_length = random.randrange(1, 8)
 bank = ''
 vowels = 'AEIOU'
@@ -23,6 +29,9 @@ for i in range(bank_length):
 if not any(x in bank for x in vowels):
     bank += random.choice(vowels)
 
+#----------------------------------------
+# Game
+#----------------------------------------
 print(f"List as many words as you can that contain the following characters (you can use each character more than once): {bank}")
 
 cont = True
