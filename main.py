@@ -18,7 +18,7 @@ prefix_tree = PrefixTree(wordList)
 #----------------------------------------
 # Character bank initialization
 #----------------------------------------
-bank_length = random.randrange(1, 8)
+bank_length = random.randrange(1, 5)
 bank = ''
 vowels = 'AEIOU'
 
