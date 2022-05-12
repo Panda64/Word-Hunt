@@ -7,9 +7,11 @@ from prefixtree import PrefixTree
 #----------------------------------------
 print('Loading dictionary...')
 
+# Opening text file that contains the dictionary
 with open('words.txt') as wordFile:
     wordList = wordFile.read().split()
 
+# Inserting dictionary into a prefix tree
 prefix_tree = PrefixTree(wordList)
 
 
@@ -26,8 +28,10 @@ for i in range(bank_length):
     if character not in bank:
         bank += character
 
+# Ensuring that the bank has at least one vowel
 if not any(x in bank for x in vowels):
     bank += random.choice(vowels)
+
 
 #----------------------------------------
 # Game
